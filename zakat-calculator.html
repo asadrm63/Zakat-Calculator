@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zakat Calculator</h1>
+
+        <form id="zakatForm">
+            <label for="nisabStandard">Nisab Standard</label>
+            <select id="nisabStandard" name="nisabStandard">
+                <option value="silver">Silver Standard</option>
+                <option value="gold">Gold Standard</option>
+                
+            </select>
+            <h4>Nisab* ($<span id="nisabValue">0</span>)</h4>
+            <h2>Assets (Value in U.S. Dollars)</h2>
+            <label for="cashOnHand">Cash on Hand</label>
+            <input type="number" id="cashOnHand" name="cashOnHand" value="0">
+
+            <label for="bankBalance">Balance Held in Bank Accounts (Checking, Savings & Business)</label>
+          
+            <input type="number" id="bankBalance" name="bankBalance" value="0">
+
+            <label for="resaleShares">Resale Value of Shares (Stocks & Mutual Funds)</label>
+            <input type="number" id="resaleShares" name="resaleShares" value="0">
+
+            <label for="resaleProperty">Resale Investment Property (Market Value)</label>
+            <input type="number" id="resaleProperty" name="resaleProperty" value="0">
+
+            <label for="retirementPlans">Retirement Plans (Vested 401K & IRA)</label>
+            <input type="number" id="retirementPlans" name="retirementPlans" value="0">
+
+            <label for="businessInventory">Business Inventory (Wholesale Value)</label>
+            <input type="number" id="businessInventory" name="businessInventory" value="0">
+
+            <label for="goldJewelry">Gold & Silver Jewelry (at Current Value)</label>
+            <input type="number" id="goldJewelry" name="goldJewelry" value="0">
+
+            <label for="goldBullion">Gold & Silver Bullion (at Current Value)</label>
+            <input type="number" id="goldBullion" name="goldBullion" value="0">
+
+            <label for="debtsOwed">Debts Owed to You (Money Lent to Others)</label>
+            <input type="number" id="debtsOwed" name="debtsOwed" value="0">
+
+            <label for="accountsReceivable">Accounts Receivable</label>
+            <input type="number" id="accountsReceivable" name="accountsReceivable" value="0">
+
+            <h3>Total Assets: $<span id="totalAssets">0</span></h3>
+
+            <h2>Liabilities (Value in U.S. Dollars)</h2>
+            <label for="shortTermDebts">Short Term Debts (Entire Amount Due)</label>
+            <input type="number" id="shortTermDebts" name="shortTermDebts" value="0">
+
+            <label for="longTermDebts">Long Term Debts (1 Month Mortgage Payment, 1 Month Car Payment, etc.)</label>
+            <input type="number" id="longTermDebts" name="longTermDebts" value="0">
+
+            <label for="incurredExpenses">Incurred Expenses for the Current Month (Rent, Utilities, etc.)</label>
+            <input type="number" id="incurredExpenses" name="incurredExpenses" value="0">
+
+            <label for="wagesDue">Wages Due to Others (Personal or Business)</label>
+            <input type="number" id="wagesDue" name="wagesDue" value="0">
+
+            <h3>Total Liabilities: $<span id="totalLiabilities">0</span></h3>
+
+            <h3>Total Zakatable Amount: $<span id="totalZakatable">0</span></h3>
+
+            <h4>Nisab* ($<span id="nisabValue">0</span>)</h4>
+            <p>*Zakat will only be Fard if the total zakatable amount reaches or exceeds the Nisab value.</p>
+
+            <h2>Your Zakat: $<span id="zakatAmount">0</span></h2>
+            <p id="zakatMessage"></p>
+
+            <button type="button" onclick="calculateZakat()">Calculate Zakat</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
